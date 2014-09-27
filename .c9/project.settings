@@ -4,11 +4,12 @@
         "configs": {
             "json()": {
                 "Django": {
-                    "runner": "Python 2.7",
-                    "command": "manage.py runserver $IP:$PORT",
+                    "runner": "Shell command",
+                    "command": "$HOME/venv/bin/python $HOME/workspace/manage.py runserver $IP:$PORT",
                     "name": "Django",
                     "default": true,
-                    "debug": true
+                    "debug": true,
+                    "env": {}
                 }
             },
             "@inited": "true"

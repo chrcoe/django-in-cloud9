@@ -1,40 +1,9 @@
+Django tutorial using Cloud9 IDE
+================================
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+This project uses Python 2.7 and Django 1.7
 
+The goal of this project is to follow along with the Django tutorial but in Cloud9 IDE.
 
-Welcome to your Django project on Cloud9 IDE!
+The main purpose for this is to familiarize myself with the IDE and see if it works for me.
 
-Here are some steps to get you started:
-
-1) Use your terminal to install and start MySQL:
-
-    $ mysql-ctl start
-
-2) Run syncdb command to sync models to database and create Django's default superuser and auth system
-
-    $ python manage.py syncdb
-
-3) Run Django
-
-    $ python manage.py runserver $IP:$PORT
-    
-4) Open your project in the shape of 'https://projectname-c9-username.c9.io/'
-
-
-Happy coding!
-The Cloud9 IDE team
-
-## Support & Documentation
-
-Django docs can be found at https://www.djangoproject.com/
-
-You may also want to follow the Django tutorial to create your first application:
-https://docs.djangoproject.com/en/1.5/intro/tutorial01/
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE.
-To watch some training videos, visit http://www.youtube.com/user/c9ide

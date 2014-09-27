@@ -28,8 +28,11 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+USER_APPS = (
+    'polls',
+)
 
-INSTALLED_APPS = (
+BUILT_IN_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -37,6 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 )
+
+INSTALLED_APPS = USER_APPS + BUILT_IN_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -80,3 +85,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#STATIC_ROOT = [os.path.join(BASE_DIR, 'static')]
+
+# Templates home
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
+#print (BASE_DIR)
+#print (STATIC_ROOT)
+print (TEMPLATE_DIRS)
