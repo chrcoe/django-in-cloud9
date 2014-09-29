@@ -25,7 +25,11 @@ class QuestionAdmin(admin.ModelAdmin):
     # add search capability
     search_fields = ['question_text']
 
+class ChoiceAdmin(admin.ModelAdmin):
+    list_display = ('choice_text','question','votes')
+    search_fields = ['choice_text']
+    list_filter = ['votes']
 
 # Register your models here.
 admin.site.register(Question, QuestionAdmin)
-admin.site.register(Choice)
+admin.site.register(Choice, ChoiceAdmin)

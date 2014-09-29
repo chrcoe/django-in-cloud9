@@ -86,6 +86,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIR= (
+    os.path.join(os.path.dirname(__file__), 'static',),
+)
+
 #STATIC_ROOT = [os.path.join(BASE_DIR, 'static')]
 
 # Templates home
@@ -93,4 +97,5 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 #print (BASE_DIR)
 #print (STATIC_ROOT)
-print (TEMPLATE_DIRS)
+print ('static files:\t{}'.format(STATICFILES_DIR))
+print ('template files:\t{}'.format(TEMPLATE_DIRS))
