@@ -87,15 +87,28 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIR= (
-    os.path.join(os.path.dirname(__file__), 'static',),
+    os.path.join(BASE_DIR, 'static',),
+    # os.path.join(os.path.dirname(__file__), 'static',),
 )
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+# common location for all static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    # os.path.join(os.path.dirname(__file__), 'static',)
 
-#STATIC_ROOT = [os.path.join(BASE_DIR, 'static')]
 
 # Templates home
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+# TEMPLATE_DIRS = [os.path.join(os.path.dirname(__file__), 'templates')]
+# TEMPLATE_DIRS = (
+#     # os.path.join(BASE_DIR, 'templates'),
+#     os.path.join(os.path.dirname(__file__), 'templates'),
+# )
 
-#print (BASE_DIR)
-#print (STATIC_ROOT)
+# TEMPLATE_DIRS = ()
+
+print ('BASE_DIR:\t{}'.format(BASE_DIR))
+print (STATIC_ROOT)
 print ('static files:\t{}'.format(STATICFILES_DIR))
-print ('template files:\t{}'.format(TEMPLATE_DIRS))
+# print ('template files:\t{}'.format(TEMPLATE_DIRS))

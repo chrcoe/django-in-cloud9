@@ -24,6 +24,11 @@ class QuestionAdmin(admin.ModelAdmin):
     list_filter = ['pub_date']
     # add search capability
     search_fields = ['question_text']
+    
+    # edit site_header/site_title variables from here (instead of copying over
+    # the template file manually):
+    # admin.AdminSite.site_header = 'Polls Administration'
+    # admin.AdminSite.site_title = 'Polls Administration'
 
 class ChoiceAdmin(admin.ModelAdmin):
     list_display = ('choice_text','question','votes')
