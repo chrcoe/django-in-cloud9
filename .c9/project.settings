@@ -5,7 +5,7 @@
             "json()": {
                 "Django": {
                     "runner": "Shell command",
-                    "command": "$HOME/venv/bin/python $HOME/workspace/manage.py runserver $IP:$PORT",
+                    "command": "$HOME/venv/bin/python $HOME/workspace/manage.py runserver 0.0.0.0:8080",
                     "name": "Django",
                     "default": true,
                     "debug": true,

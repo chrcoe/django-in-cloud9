@@ -72,7 +72,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Detroit'
 
 USE_I18N = True
 
@@ -100,6 +100,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Templates home
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 # TEMPLATE_DIRS = [os.path.join(os.path.dirname(__file__), 'templates')]
 # TEMPLATE_DIRS = (
 #     # os.path.join(BASE_DIR, 'templates'),
@@ -111,4 +112,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 print ('BASE_DIR:\t{}'.format(BASE_DIR))
 print (STATIC_ROOT)
 print ('static files:\t{}'.format(STATICFILES_DIR))
-# print ('template files:\t{}'.format(TEMPLATE_DIRS))
+print ('template files:\t{}'.format(TEMPLATE_DIRS))
