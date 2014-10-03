@@ -1,0 +1,6 @@
+{% block nav %}
+<ul id="nav">
+    <li>{% block nav-home %}<a href="{% url 'index' %}">Home</a>{% endblock %}</li>
+    <li>{% block nav-about %}<a href="{% url 'polls:index' %}">Polls</a>{% endblock %}</li>
+</ul>
+{% endblock %}
