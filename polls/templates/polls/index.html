@@ -3,12 +3,19 @@
 <h1>Polls</h1>
 
 {% if latest_question_list %}
-    {# create an unordered list #}
-    <ul>
+    {# create a table #}
+    <table cellpadding="2" border="1">
+        <tr>
+            <th>Question</th>
+            <th>Date Published</th>
+        </tr>
     {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        <tr>
+            <td><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></td>
+            <td>{{ question.pub_date }}</td>
+        </tr>
     {% endfor %}
-    </ul>
+    </table>
 {% else %}
-    <p>No polls are available.</p>
+    <p>No current polls are available.</p>
 {% endif %}

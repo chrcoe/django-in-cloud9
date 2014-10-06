@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_DIR = os.path.dirname(__file__)
 
 
 # Quick-start development settings - unsuitable for production
@@ -77,6 +78,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+# media files
+MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
@@ -84,15 +88,17 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIR= (
-    os.path.join(BASE_DIR, 'static',),
+    os.path.join(PROJECT_DIR, 'staticfiles'),
+    # os.path.join(BASE_DIR, 'static',),
     # os.path.join(os.path.dirname(__file__), 'static',),
 )
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+# )
 # common location for all static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
     # os.path.join(os.path.dirname(__file__), 'static',)
 
 
@@ -107,6 +113,7 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 # TEMPLATE_DIRS = ()
 
 print ('BASE_DIR:\t{}'.format(BASE_DIR))
+print ('PROJECT_DIR:\t{}'.format(PROJECT_DIR))
 print (STATIC_ROOT)
 print ('static files:\t{}'.format(STATICFILES_DIR))
 print ('template files:\t{}'.format(TEMPLATE_DIRS))
